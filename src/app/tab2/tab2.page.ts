@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 })
 export class Tab2Page {
 
-  constructor() {}
+  constructor() { }
 
   P = 0
   r = 0.00
@@ -17,10 +17,18 @@ export class Tab2Page {
   t = 0
 
   calc() {
-    this.M = this.P * (1 + (this.r / this. n)) * this.n*this.t
+    this.M = this.P * (1 + (this.r / this.n)) * this.n * this.t
+  }
+  resetForm() {
+    this.P = 0;
+    this.r = 0.00;
+    this.n = 0;
+    this.M = 0;
+    this.t = 0;
+
   }
 
   //puxar alert se r for maior que 15%
-alertButtons = 'Estou ciente disto'
+  alertButtons = 'Estou ciente disto'
 
 }

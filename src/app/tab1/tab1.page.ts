@@ -18,7 +18,7 @@ export class Tab1Page {
   showAlert: boolean = false;
 
   calc() {
-    this.P = this.V * (this.i/100) / (1 - (1 + (this.i/100))**-this.n)
+    this.P = this.V * (this.i / 100) / (1 - (1 + (this.i / 100)) ** -this.n)
     this.R = Math.round(this.P)
     console.log(this.V)
     console.log(this.P)
@@ -61,6 +61,14 @@ export class Tab1Page {
   onAlertDismiss() {
     this.showAlert = false;
   }
-
+  resetForm() {
+    this.V = 0;
+    this.i = 0;
+    this.n = 0;
+    this.P = 0;
+    this.R = 0;
+    this.showAlert = false;
+  }
 }
+
 

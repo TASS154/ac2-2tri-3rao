@@ -18,12 +18,15 @@
     <h4>Investimento</h4>
     <ion-input type="number" label="Valor Inicial" label-placement="floating" fill="solid"
       placeholder="Insira o valor inicial para o Investimento" [(ngModel)]="P"></ion-input>
-    <ion-input type="number" label="Taxa de Juros" label-placement="floating" fill="solid" placeholder="Insira a taxa de juros anual (Em decimal)"
-      [(ngModel)]="r"></ion-input>
+    <ion-input type="number" label="Taxa de Juros" label-placement="floating" fill="solid"
+      placeholder="Insira a taxa de juros anual (Em decimal)" [(ngModel)]="r"></ion-input>
     <ion-input type="number" label="Numero de periodos de capitalizacao por ano" label-placement="floating" fill="solid"
       placeholder="Insira o numero de periodos de capitalizacao por Ano" [(ngModel)]="n"></ion-input>
     <ion-input type="number" label="Tempo" label-placement="floating" fill="solid"
       placeholder="Insira o tempo (Em anos)" [(ngModel)]="t"></ion-input>
+    <div class="resets">
+      <ion-button color="danger" (click)="resetForm()">Resetar Tudo</ion-button>
+    </div>
     <ion-button (click)="calc()">Iniciar Calculo</ion-button>
   </div>
 

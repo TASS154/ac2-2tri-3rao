@@ -1,8 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
+    <ion-title>Tab 3</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -14,7 +12,7 @@
   </ion-header>
 
   <div class="principal">
-    <img id="icon-3" [src]="imageSrc" alt="PigVault Animation">
+    <img id="icon-3" [src]="imageSrc" [ngClass]="{'animate': imageSrc === gifSrc}" alt="PigVault Animation">
     <h1>PigVault</h1>
     <h4>Despesas Mensais</h4>
   </div>
@@ -22,7 +20,7 @@
   <ion-list class="centered-list">
     <ion-item>
       <ion-label position="floating">Renda Líquida Mensal</ion-label>
-      <ion-range min="0" max="20000" step="100" [(ngModel)]="monthlyIncome" pin="true" color="primary">
+      <ion-range min="0" max="20000" step="100" [(ngModel)]="salario" pin="true" color="primary">
         <ion-label slot="start">R$ 0</ion-label>
         <ion-label slot="end">R$ 20.000</ion-label>
       </ion-range>
@@ -30,28 +28,28 @@
 
     <ion-item>
       <ion-label position="floating">Moradia</ion-label>
-      <ion-input type="number" [(ngModel)]="expenses[0]" placeholder="R$ 0"></ion-input>
+      <ion-input type="number" [(ngModel)]="gastos[0]" placeholder="R$ 0"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label position="floating">Alimentação</ion-label>
-      <ion-input type="number" [(ngModel)]="expenses[1]" placeholder="R$ 0"></ion-input>
+      <ion-input type="number" [(ngModel)]="gastos[1]" placeholder="R$ 0"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label position="floating">Transporte</ion-label>
-      <ion-input type="number" [(ngModel)]="expenses[2]" placeholder="R$ 0"></ion-input>
+      <ion-input type="number" [(ngModel)]="gastos[2]" placeholder="R$ 0"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label position="floating">Lazer</ion-label>
-      <ion-input type="number" [(ngModel)]="expenses[3]" placeholder="R$ 0"></ion-input>
+      <ion-input type="number" [(ngModel)]="gastos[3]" placeholder="R$ 0"></ion-input>
     </ion-item>
   </ion-list>
-
+  <ion-button expand="block" color="danger" (click)="resetForm()">Resetar Tudo</ion-button>
   <ion-button expand="block" (click)="calc()">Calcular Despesas</ion-button>
 
   <ion-label>
-    <h1 class="Resultado">Total de Despesas: R$ {{totalExpenses | number:'1.2-2'}}</h1>
+    <h1 class="Resultado">Total de Despesas: R$ {{gastos_totais | number:'1.2-2'}}</h1>
   </ion-label>
 </ion-content>

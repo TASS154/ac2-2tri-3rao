@@ -1,6 +1,6 @@
 .principal {
     text-align: center;
-    padding: 20px;
+    padding: 0px;
   }
 
   .principal h1 {
@@ -9,16 +9,33 @@
   }
 
   .principal h4 {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #666;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
+
   #icon-3 {
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
     margin: 20px auto;
     display: block;
+  }
+
+  #icon-3.animate {
+    animation: growAndShrink 1.12s ease-in-out;
+  }
+
+  @keyframes growAndShrink {
+    0% {
+      transform: scale(1);
+    }
+  50% {
+      transform: scale(1.5);
+    }
+    100% {
+      transform: scale(1);
+    }
   }
 
   .centered-list {
@@ -30,7 +47,7 @@
   ion-item {
     --padding-start: 10px;
     --padding-end: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
   }
 
   ion-range {

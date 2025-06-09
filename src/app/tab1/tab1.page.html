@@ -36,13 +36,13 @@
     <ion-button (click)="setLoanValue(10000)">R$10.000</ion-button>
   </div>
   <div class="resets">
-
+    <ion-button color="danger" (click)="resetForm()">Resetar Tudo</ion-button>
   </div>
-     <ion-label>
+  <ion-label>
     <h1 class="Resultado">Parcela Mensal: R${{ R }}</h1>
-    </ion-label>
+  </ion-label>
 
-    <ion-alert [isOpen]="showAlert" header="Atenção"
-      message="A taxa de juros informada é superior a 20%. Deseja continuar?" [buttons]="alertButtons"
-      (didDismiss)="onAlertDismiss()"></ion-alert>
+  <ion-alert [isOpen]="showAlert" header="Atenção"
+    message="A taxa de juros informada é superior a 20%. Deseja continuar?" [buttons]="alertButtons"
+    (didDismiss)="onAlertDismiss()"></ion-alert>
 </ion-content>
