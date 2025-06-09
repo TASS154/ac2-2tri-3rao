@@ -1,0 +1,60 @@
+.principal {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .principal h1 {
+    font-size: 2rem;
+    color: #000;
+  }
+
+  .principal h4 {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 20px;
+  }
+
+  #icon-3 {
+    width: 50px;
+    height: 50px;
+    margin: 20px auto;
+    display: block;
+  }
+
+  .centered-list {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+
+  ion-item {
+    --padding-start: 10px;
+    --padding-end: 10px;
+    margin-bottom: 10px;
+  }
+
+  ion-range {
+    max-width: 500px;
+    margin: 10px auto;
+    padding: 0 10px;
+  }
+
+  ion-input {
+    margin: 10px 0;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  ion-button {
+    margin: 20px auto;
+    max-width: 300px;
+    display: block;
+  }
+
+  .Resultado {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #000;
+    margin: 20px 0;
+  }

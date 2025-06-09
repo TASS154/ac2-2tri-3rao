@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      TwoBank
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,9 +9,40 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+      <ion-title size="large"><ion-img id="icon-1" alt="Icone" src="https://iili.io/FF1oQRI.png">
+          TwoBank
+        </ion-img>
+      </ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <div class="principal">
+    <img src="https://iili.io/FF1oQRI.png">
+    <h1>Two Bank</h1>
+    <h4>Empréstimos</h4>
+    <ion-input type="number" label="Valor do Empréstimo" label-placement="floating" fill="solid"
+      placeholder="Insira o valor do empréstimo" [(ngModel)]="V" (ionInput)="onValueChange()"></ion-input>
+    <ion-input type="number" label="Taxa de Juros Mensal (%)" label-placement="floating" fill="solid"
+      placeholder="Insira a taxa de juros" [(ngModel)]="i" (ionInput)="onValueChange()"></ion-input>
+    <ion-input type="number" label="Número de Parcelas (meses)" label-placement="floating" fill="solid"
+      placeholder="Insira o número de parcelas" [(ngModel)]="n" (ionInput)="onValueChange()"></ion-input>
+  </div>
+
+  <div class="preset-buttons-1">
+    <h3>Empréstimos Comuns pelos Usuários</h3>
+    <ion-button (click)="setLoanValue(1000)">R$1.000</ion-button>
+    <ion-button (click)="setLoanValue(3000)">R$3.000</ion-button>
+    <ion-button (click)="setLoanValue(5000)">R$5.000</ion-button>
+    <ion-button (click)="setLoanValue(10000)">R$10.000</ion-button>
+  </div>
+  <div class="resets">
+
+  </div>
+     <ion-label>
+    <h1 class="Resultado">Parcela Mensal: R${{ R }}</h1>
+    </ion-label>
+
+    <ion-alert [isOpen]="showAlert" header="Atenção"
+      message="A taxa de juros informada é superior a 20%. Deseja continuar?" [buttons]="alertButtons"
+      (didDismiss)="onAlertDismiss()"></ion-alert>
 </ion-content>
