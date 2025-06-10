@@ -26,25 +26,16 @@
       </ion-range>
     </ion-item>
 
-    <ion-item>
-      <ion-label position="floating">Moradia</ion-label>
-      <ion-input type="number" [(ngModel)]="gastos[0]" placeholder="R$ 0"></ion-input>
-    </ion-item>
 
-    <ion-item>
-      <ion-label position="floating">Alimentação</ion-label>
-      <ion-input type="number" [(ngModel)]="gastos[1]" placeholder="R$ 0"></ion-input>
-    </ion-item>
 
-    <ion-item>
-      <ion-label position="floating">Transporte</ion-label>
-      <ion-input type="number" [(ngModel)]="gastos[2]" placeholder="R$ 0"></ion-input>
-    </ion-item>
+      <ion-input type="number" [(ngModel)]="gastos[0]" placeholder="Insira o valor da moradia" label="Moradia" label-placement="floating" fill="solid"></ion-input>
 
-    <ion-item>
-      <ion-label position="floating">Lazer</ion-label>
-      <ion-input type="number" [(ngModel)]="gastos[3]" placeholder="R$ 0"></ion-input>
-    </ion-item>
+      <ion-input type="number" [(ngModel)]="gastos[1]" placeholder="Insira o valor da alimentação" label="alimentação	" label-placement="floating" fill="solid"></ion-input>
+
+      <ion-input type="number" [(ngModel)]="gastos[2]" placeholder="Insira o valor do transporte" label="Transporte" label-placement="floating" fill="solid"></ion-input>
+
+      <ion-input type="number" [(ngModel)]="gastos[3]" placeholder="Insira o valor do lazer" label="Lazer" label-placement="floating" fill="solid"></ion-input>
+
   </ion-list>
   <ion-button expand="block" color="danger" (click)="resetForm()">Resetar Tudo</ion-button>
   <ion-button expand="block" (click)="calc()">Calcular Despesas</ion-button>

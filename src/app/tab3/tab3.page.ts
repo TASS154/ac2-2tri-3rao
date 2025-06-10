@@ -11,7 +11,7 @@ export class Tab3Page {
   imageSrc: string = 'https://iili.io/FFXS2je.png';
   gifSrc: string = 'https://iili.io/FFXwzsp.gif';
   private pngSrc: string = 'https://iili.io/FFXS2je.png';
-  private gifDuration: number = 1120; // 1.12 segundos
+  private gifDuration: number = 1120;
 
   salario: number = 0;
   gastos: number[] = [0, 0, 0, 0];
@@ -21,18 +21,14 @@ export class Tab3Page {
   constructor(private alertController: AlertController) { }
 
   async calc() {
-    // Alterna para o GIF
     this.imageSrc = this.gifSrc;
 
-    // Reverte para o PNG após a duração do GIF
     setTimeout(() => {
       this.imageSrc = this.pngSrc;
     }, this.gifDuration);
 
-    // Calcula o total de despesas
     this.gastos_totais = this.gastos.reduce((sum, expense) => sum + (expense || 0), 0);
 
-    // Exibe alerta se despesas excederem a renda
     if (this.gastos_totais > this.salario) {
       const suggestions = this.diminuiEssesGastosAi();
       await this.presentAlert(suggestions);

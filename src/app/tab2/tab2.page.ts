@@ -15,9 +15,11 @@ export class Tab2Page {
   n = 0
   M = 0
   t = 0
+  R = 0
 
   calc() {
-    this.M = this.P * (1 + (this.r / this.n)) * this.n * this.t
+    this.M = this.P * (1 + (this.r/100 / this.n)) ** (this.n * this.t)
+    this.R = Math.round(this.M)
   }
   resetForm() {
     this.P = 0;
@@ -25,8 +27,9 @@ export class Tab2Page {
     this.n = 0;
     this.M = 0;
     this.t = 0;
-
   }
+
+
 
   //puxar alert se r for maior que 15%
   alertButtons = 'Estou ciente disto'
